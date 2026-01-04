@@ -7,3 +7,5 @@
 |[20 - Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)|python|easy|[validparentheses.py](easy/validparentheses.py)||
 |[21 - Merge Two Sorted Linked Lists](https://leetcode.com/problems/merge-two-sorted-lists/description/)|python|easy|[mergetwosortedlinkedlists.py](easy/mergetwosortedlinkedlists.py)|Zipper Approach|
 |[26 - Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)|python|easy|[removeduplicatesfromsortedarray.py](easy/removeduplicatesfromsortedarray.py)|Set \| Two Pointer|
+|[27 - Remove Element](https://leetcode.com/problems/remove-element/description/)|python|easy|[removeelement.py](easy/removeelement.py)|Two Pointer|
+||||||
