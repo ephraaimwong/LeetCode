@@ -10,4 +10,5 @@
 |[27 - Remove Element](https://leetcode.com/problems/remove-element/description/)|python|easy|[removeelement.py](easy/removeelement.py)|Two Pointer|
 |[28 - Find index of first occurrence in a string](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description/)|python| easy| [firstoccurrence.py](easy/firstoccurrence.py)||
 |[35 - Search Insert Position](https://leetcode.com/problems/search-insert-position/description/)|python|easy|[searchinsertposition.py](easy/searchinsertposition.py)|Binary Search|
+|[58 - Length of Last Word](https://leetcode.com/problems/length-of-last-word/description/)|python|easy|[lengthoflastword.py](easy/lengthoflastword.py)|Strip,Split|
 ||||||

@@ -6,6 +6,10 @@ class Solution(object):
         :rtype: int
         """
         
+        """
+        ---- Solution Intent (Binary Search) ----
+        O(log n) runtime specified which is binary search
+        """
         upper = len(nums) - 1
         lower = 0
         midPoint = (upper - lower) // 2
