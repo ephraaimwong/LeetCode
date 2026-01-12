@@ -29,7 +29,7 @@ class Solution(object):
         if x < 0 | x % 10 == 0 & x!= 0:
             return False
 
-        temp = x
+        temp = x    
         reversedX = 0
 
         while temp > 0:

@@ -1,18 +1,20 @@
 | LeetCode #| Language | Difficulty | <div style="width: 70px;">My Solution</div>  |Algorithm/Approach|<div style= "width:150px;">Key Concept(s) </div>|
 | - | - | - | - | - | - |
-| [1 - Two Sum](https://leetcode.com/problems/two-sum/description/https:/) | python   | easy       | [LC1](easy/twosum.py) |||
-|[9 - Palindrome Number](https://leetcode.com/problems/palindrome-number/)|python|easy|[LC9](easy/palindromenumber.py)|||
-|[13 - Roman To Integer](https://leetcode.com/problems/roman-to-integer/description/)|python|easy|[LC13](easy/romantointeger.py)|||
-|[14 - Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/description/)|python|easy|[LC14](easy/longestcommonprefix.py)|||
-|[20 - Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)|python|easy|[LC20](easy/validparentheses.py)|||
-|[21 - Merge Two Sorted Linked Lists](https://leetcode.com/problems/merge-two-sorted-lists/description/)|python|easy|[LC21](easy/mergetwosortedlinkedlists.py)|Zipper Approach||
-|[26 - Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)|python|easy|[LC26](easy/removeduplicatesfromsortedarray.py)|Set \| Two Pointer||
-|[27 - Remove Element](https://leetcode.com/problems/remove-element/description/)|python|easy|[LC27](easy/removeelement.py)|Two Pointer||
+| [1 - Two Sum](https://leetcode.com/problems/two-sum/description/https:/) | python   | easy | [LC1](easy/twosum.py) |Hashmap Complement|Given a target and current value, building a complement hashmap allows us to scan array and determine complement in a single pass|
+|[9 - Palindrome Number](https://leetcode.com/problems/palindrome-number/)|python|easy|[LC9](easy/palindromenumber.py)|Reverse String \| Mod(10) digit by digit reversal | mod(10), integer division 10 will remove rightmost digit, add digit and *10 for every digit will place digit in correct position|
+|[13 - Roman To Integer](https://leetcode.com/problems/roman-to-integer/description/)|python|easy|[LC13](easy/romantointeger.py)|Lookahead(1) with hashmap|Rules built into the roman system constrain numbers to allow I<V<X<L... therefore if a smaller number appears before bigger number, it is prefix and you subtract prefixes|
+|[14 - Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/description/)|python|easy|[LC14](easy/longestcommonprefix.py)|Sort By Length, Constrain search to shortest word|Prefix MUST appear in all elements to be valid, use all letters in shortest word and loop the array, eliminate rightmost char if not valid till empty or valid|
+|[20 - Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)|python|easy|[LC20](easy/validparentheses.py)| Stack with Hashmap Complements| Push bracket complements onto the stack when encountered, pop from stack when char matches. Return not empty |
+|[21 - Merge Two Sorted Linked Lists](https://leetcode.com/problems/merge-two-sorted-lists/description/)|python|easy|[LC21](easy/mergetwosortedlinkedlists.py)|Zipper Approach|Current a new head and node for iteration. Compare list1 and list2 current node value and set the walk accordingly.|
+|[26 - Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/)|python|easy|[LC26](easy/removeduplicatesfromsortedarray.py)|Set \| Two Pointer|1: Sets will ignore duplicates <br>2: Use iterator (read) and slow pointer (write), since read is faster than write, overwriting data is not a concern|
+|[27 - Remove Element](https://leetcode.com/problems/remove-element/description/)|python|easy|[LC27](easy/removeelement.py)|Two Pointer|Use iterator (read) and slow pointer (write), since read is faster than write, overwriting data is not a concern|
 |[28 - Find index of first occurrence in a string](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description/)|python| easy| [LC28](easy/firstoccurrence.py)|||
-|[35 - Search Insert Position](https://leetcode.com/problems/search-insert-position/description/)|python|easy|[LC35](easy/searchinsertposition.py)|Binary Search||
-|[58 - Length of Last Word](https://leetcode.com/problems/length-of-last-word/description/)|python|easy|[LC58](easy/lengthoflastword.py)|Strip,Split||
-|[69 - Sqrt(x)](https://leetcode.com/problems/sqrtx/description/)|python|easy|[LC69](easy/sqrtx.py)|Binary Search||
-|[83 - Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/)|python|easy|[LC83](easy/removeduplicatesfromsortedlist.py)|Singly Linked List||
-|[70 - Climbing Stairs](https://leetcode.com/problems/climbing-stairs/description/)|python|easy|[LC70](easy/climbingstairs.py)|gotta revisit||
+|[35 - Search Insert Position](https://leetcode.com/problems/search-insert-position/description/)|python|easy|[LC35](easy/searchinsertposition.py)|Binary Search|Binary Search is O(log N). <br>On crossover, upper is the floor (number rounded-down/last smaller number) and lower is the ceiling(number rounded up/next biggernumber)|
+|[58 - Length of Last Word](https://leetcode.com/problems/length-of-last-word/description/)|python|easy|[LC58](easy/lengthoflastword.py)|Strip,Split|Strip removes leading and trailing whitespace, split breaks string into array|
+|[67 - Add Binary](https://leetcode.com/problems/add-binary/description/)|python|easy|[LC67](easy/addbinary.py)|typecast, binary cast|int(string,base) tells computer that string is in form of base x NOT convert string to base x.|
+|[69 - Sqrt(x)](https://leetcode.com/problems/sqrtx/description/)|python|easy|[LC69](easy/sqrtx.py)|Binary Search|Use range 0 - x (sqrt(x) cannot be bigger than x), return upper since we want the floor(number rounded down)|
+|[83 - Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/)|python|easy|[LC83](easy/removeduplicatesfromsortedlist.py)|Singly Linked List| Nodes are already sorted, if currentNode == nextNode, set current.next to 2 ahead and kill the next node (killNode = None). Only advance when current != next|
+|[70 - Climbing Stairs](https://leetcode.com/problems/climbing-stairs/description/)|python|easy|[LC70](easy/climbingstairs.py)|gotta revisit|ways(N) = ways(N-1) + ways(N-2) <br>|
 |[88 - Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/description/)|python|easy|[LC88](easy/mergesortedarray.py)|3 Pointer|Direction of pointers are dependent on overwriting ability when carrying out in-place sorting|
-||||||
+|[94 - Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/description/)|python|easy|[LC94](easy/inordertraversal.py)|DFS|1. Recursive, call left till None, then right till none <br>2. Stack, DFS left while pushing all nodes into stack, whenever no more left, try right which should loop DFS left again if available|
+|||||||
