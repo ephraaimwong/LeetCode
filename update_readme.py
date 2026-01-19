@@ -117,6 +117,15 @@ def update():
         snippet = re.escape(startTag) + r"(.*?)" + re.escape(endTag)
         overwrite = f"{startTag}\n{newTable}\n{endTag}"
         
+        
+        match = re.search(snippet, readmeText, flags=re.DOTALL)
+        if match:
+            print(f"✅ FOUND tags for {difficulty}!")
+        else:
+            print(f"❌ COULD NOT FIND tags for {difficulty}. Check your README spacing.")
+        
+        
+        
         readmeText = re.sub(snippet, overwrite, readmeText, flags=re.DOTALL)
     with open(root_readme, "w", encoding="utf-8") as file:
         file.write(readmeText)
