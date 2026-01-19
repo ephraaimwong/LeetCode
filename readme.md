@@ -40,6 +40,5 @@
 | LeetCode #| Language | Solution |Algorithm/Approach|<div style= "width:150px;">Key Concept(s) </div>|
 | - | - | - | - | - |
 <!-- START Medium -->
-|[2 - Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)|python|[LC2](medium/LC2)|Linked List, Integer Division, Modulo|Read value, calculate sum, update carry, repeat till l1 and l2 and carry is finished|
-||||||
+
 <!-- END Medium -->
