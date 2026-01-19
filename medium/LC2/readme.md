@@ -1,6 +1,7 @@
 ---
 # Metadata
-number: 2 Numbers
+number: 2 
+name: Add Two Numbers
 url: https://leetcode.com/problems/add-two-numbers/
 
 # List of Collaborator Solutions
