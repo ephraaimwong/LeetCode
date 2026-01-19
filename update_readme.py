@@ -14,9 +14,9 @@ import yaml
 # parentCloseTag = ""
 
 SECTIONS = {
-    "Easy": {"start": "", "end": ""},
-    "Medium": {"start": "", "end": ""},
-    "Hard": {"start": "", "end": ""}
+    "Easy": {"start": "<!-- START Easy -->", "end": "<!-- END Easy>"},
+    "Medium": {"start": "<!-- START Medium -->", "end": "<!-- END Medium -->"},
+    "Hard": {"start": "<!-- START Hard -->", "end": "<!-- END Hard -->"}
 }
 
 def read_frontmatter(file):
@@ -120,5 +120,6 @@ def update():
         readmeText = re.sub(snippet, overwrite, readmeText, flags=re.DOTALL)
     with open(root_readme, "w", encoding="utf-8") as file:
         file.write(readmeText)
-    if __name__ == "__main__":
-        update()
+if __name__ == "__main__":
+    update()
+    
