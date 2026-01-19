@@ -14,7 +14,7 @@ import yaml
 # parentCloseTag = ""
 
 SECTIONS = {
-    "Easy": {"start": "<!-- START Easy -->", "end": "<!-- END Easy>"},
+    "Easy": {"start": "<!-- START Easy -->", "end": "<!-- END Easy -->"},
     "Medium": {"start": "<!-- START Medium -->", "end": "<!-- END Medium -->"},
     "Hard": {"start": "<!-- START Hard -->", "end": "<!-- END Hard -->"}
 }
