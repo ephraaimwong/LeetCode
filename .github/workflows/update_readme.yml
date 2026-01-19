@@ -3,9 +3,9 @@ name: Update Root readme Table
 on:
     push:
         paths:
-            - "easy/***"
-            - "medium/***"
-            - "hard/***"
+            - "easy/**"
+            - "medium/**"
+            - "hard/**"
             - "update_readme.py"
     workflow_dispatch:
 
