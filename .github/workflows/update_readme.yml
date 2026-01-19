@@ -1,0 +1,32 @@
+name: Update Root readme Table
+
+on:
+    push:
+        paths:
+            - "easy/***"
+            - "medium/***"
+            - "hard/***"
+            - "update_readme.py"
+    workflow_dispatch:
+
+permissions:
+    contents: write
+jobs:
+    update-rootreadme:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout repo
+            uses: actions/checkout@v4
+          - name: Set up Python
+            uses: actions/setup-python@v4
+            with:
+              python-version: "3.9"
+          - name: Install Dependencies
+            run: pip install pyyaml
+          - name: Run Update Script
+            run: python update_readme.py
+          - name: Commit and Push
+            uses: stefanzweifel/git-auto-commit-action@v5
+            with:
+              commit_message: "docs: Auto-update root readme with new solutions"
+              file_pattern: readme.md
