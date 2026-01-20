@@ -19,6 +19,9 @@ SECTIONS = {
     "Hard": {"start": "<!-- START Hard -->", "end": "<!-- END Hard -->"}
 }
 
+GREENCHECK = "\u2705"
+REDCROSS = "\u274C"
+
 def read_frontmatter(file):
     """
     Read YAML front matter in child readme
@@ -86,7 +89,7 @@ def update():
             readmePath = os.path.join(folderPath, "README.md")
             
             if os.path.isdir(folderPath) and os.path.exists(readmePath):
-                print(f"\U+2705 {questionFolder} README found.")
+                print(f"{GREENCHECK} {questionFolder} README found.")
                 meta = read_frontmatter(readmePath)
                 # if meta and 'difficulty' in meta:
                 if meta:
@@ -97,13 +100,13 @@ def update():
                         rowsByDifficulty[difficultyType].append((problemNumber, newRows))
                         print(f" Mapped LC{problemNumber} to {difficultyType} table")
                     else:
-                        print(f"\U+274C Error: {difficultyType} is not a valid difficulty table.")
+                        print(f"{REDCROSS} Error: {difficultyType} is not a valid difficulty table.")
             else:
-                print(f"\U+274C {questionFolder} README not found.")
+                print(f"{REDCROSS} {questionFolder} README not found.")
             
     root_readme = "README.md"
     if not os.path.exists(root_readme):
-        print(f"\U+274C Error: Root {root_readme} not found.")
+        print(f"{REDCROSS} Error: Root {root_readme} not found.")
         return
     with open(root_readme, "r", encoding="utf-8") as file:
         readmeText = file.read()
@@ -112,7 +115,12 @@ def update():
         markers = SECTIONS.get(difficulty)
         if not markers:
             continue
-        header = ["| LeetCode #| Language | Solution |Algorithm/Approach|<div style= \"width:150px;\">Key Concept(s) </div>|", "| --- | --- | --- | --- | --- |"]
+        
+        header = [
+            "| LeetCode #| Language | Solution |Algorithm/Approach|<div style= \"width:150px;\">Key Concept(s) </div>|",
+            "| --- | --- | --- | --- | --- |"
+            ]
+        
         data.sort(key=lambda x:x[0])
         flatRows = []
         for _, rows in data:
