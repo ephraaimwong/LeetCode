@@ -79,7 +79,7 @@ def generate_MD_rows(meta, folder):
         rows.append(MD_Row)
     
     return rows
-x
+
 def update():
     rowsByDifficulty = {key: [] for key in SECTIONS}
     for category in ["easy", "medium", "hard"]:
