@@ -68,9 +68,10 @@ def generate_MD_rows(meta, folder):
         if summary:
             summary = summary.strip().replace("\n","<br>")
         
+        subFolderName = folder.split("/")[-1]
         if filename:
             filepath = os.path.join(folder, filename).replace("\\", "/")
-            filepath = f"[{folder.split("/")[1]}]({filepath})"
+            filepath = f"[{subFolderName}]({filepath})"
         else:
             filepath = "No File Found"
         
