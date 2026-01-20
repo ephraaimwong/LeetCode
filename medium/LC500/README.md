@@ -8,18 +8,17 @@ url: https://leetcode.com/problems/add-two-numbers/
 solutions:
   - author: Ephraim
     language: python
-    filename: addtwo.py
-    algorithm: Hashmap Complement
+    filename: 
+    algorithm: 
     summary: |
-      Given a target and current value, building a complement hashmap
-      allows us to scan array and determine if complement exists within a single pass.  
+      
   
   - author: Ephraim2
     language: python
-    filename: addtwo_test.py
+    filename: 
     algorithm: Hashmap Complement2
     summary: |
-      Lorem Ipsum etc etc.
+      
       
   - author: Ephraim3
     language: python
