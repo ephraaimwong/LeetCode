@@ -76,116 +76,27 @@ def generate_MD_rows(meta, folder):
     
     return rows
 
-# def update():
-#     rowsByDifficulty = {key: [] for key in SECTIONS}
-#     for category in ["easy", "medium", "hard"]:
-#         if not os.path.exists(category):
-#             continue
-#         for questionFolder in os.listdir(category):
-#             folderPath = os.path.join(category, questionFolder)
-#             readmePath = os.path.join(folderPath, "readme.md")
-            
-#             if os.path.isdir(folderPath) and os.path.exists(readmePath):
-#                 meta = read_frontmatter(readmePath)
-#                 if meta and 'difficulty' in meta:
-#                     difficultyType = meta['difficulty'].capitalize()
-#                     if difficultyType in rowsByDifficulty:
-#                         newRows = generate_MD_rows(meta, folderPath)
-#                         problemNumber = int(meta.get("number", 0))
-#                         rowsByDifficulty[difficultyType].append((problemNumber, newRows))
-#     root_readme = "readme.md"
-#     if not os.path.exists(root_readme):
-#         print(f"Error: {root_readme} not found.")
-#         return
-#     with open(root_readme, "r", encoding="utf-8") as file:
-#         readmeText = file.read()
-    
-#     for difficulty, data in rowsByDifficulty.items():
-#         markers = SECTIONS.get(difficulty)
-#         if not markers:
-#             continue
-#         data.sort(key=lambda x:x[0])
-#         flatRows = []
-#         for _, rows in data:
-#             flatRows.extend(rows)
-            
-#         newTable = "\n".join(flatRows)
-#         startTag = markers["start"]
-#         endTag = markers["end"]
-        
-#         snippet = re.escape(startTag) + r"(.*?)" + re.escape(endTag)
-#         overwrite = f"{startTag}\n{newTable}\n{endTag}"
-        
-        
-#         match = re.search(snippet, readmeText, flags=re.DOTALL)
-#         if match:
-#             print(f"✅ FOUND tags for {difficulty}!")
-#         else:
-#             print(f"❌ COULD NOT FIND tags for {difficulty}. Check your README spacing.")
-        
-        
-        
-#         readmeText = re.sub(snippet, overwrite, readmeText, flags=re.DOTALL)
-#     with open(root_readme, "w", encoding="utf-8") as file:
-#         file.write(readmeText)
-# if __name__ == "__main__":
-#     update()
-    
 def update():
-    print("🚀 STARTING DEBUG RUN...")
-    
     rowsByDifficulty = {key: [] for key in SECTIONS}
-    
-    # 1. LOOP THROUGH CATEGORIES
-    # ⚠️ Check: Do your actual folders match these lowercase names exactly?
-    categories = ["easy", "medium", "hard"]
-    
-    for category in categories:
+    for category in ["easy", "medium", "hard"]:
         if not os.path.exists(category):
-            print(f"⚠️  Skipping '{category}' (Folder not found)")
             continue
-            
-        print(f"📂 Scanning category: {category}...")
-        
-        # 2. LOOP THROUGH PROBLEM FOLDERS
         for questionFolder in os.listdir(category):
             folderPath = os.path.join(category, questionFolder)
-            readmePath = os.path.join(folderPath, "readme.md") # Ensure this matches your file name!
+            readmePath = os.path.join(folderPath, "readme.md")
             
-            # Check if it's a folder and has a readme
-            if os.path.isdir(folderPath):
-                if os.path.exists(readmePath):
-                    print(f"   📄 Found README in {questionFolder}. Parsing...")
-                    
-                    # 3. READ METADATA
-                    meta = read_frontmatter(readmePath)
-                    
-                    if meta:
-                        # Check Difficulty
-                        if 'difficulty' in meta:
-                            diff = meta['difficulty'].capitalize() # Force "Medium"
-                            print(f"      ✅ Difficulty found: {diff}")
-                            
-                            if diff in rowsByDifficulty:
-                                newRows = generate_MD_rows(meta, folderPath)
-                                print(f"      🎉 Generated {len(newRows)} rows.")
-                                problemNumber = int(meta.get("number", 0))
-                                rowsByDifficulty[diff].append((problemNumber, newRows))
-                            else:
-                                print(f"      ❌ '{diff}' is not in SECTIONS keys!")
-                        else:
-                            print(f"      ❌ Missing 'difficulty' key in YAML.")
-                    else:
-                        print(f"      ❌ YAML Parsing Failed (Check indentation/tabs).")
-                else:
-                    print(f"   ⚠️  No readme.md found in {questionFolder}")
-
-    # 4. UPDATE THE ROOT README
-    root_readme = "readme.md" 
+            if os.path.isdir(folderPath) and os.path.exists(readmePath):
+                meta = read_frontmatter(readmePath)
+                if meta and 'difficulty' in meta:
+                    difficultyType = meta['difficulty'].capitalize()
+                    if difficultyType in rowsByDifficulty:
+                        newRows = generate_MD_rows(meta, folderPath)
+                        problemNumber = int(meta.get("number", 0))
+                        rowsByDifficulty[difficultyType].append((problemNumber, newRows))
+    root_readme = "readme.md"
     if not os.path.exists(root_readme):
-        print(f"❌ Error: {root_readme} not found.")
+        print(f"Error: {root_readme} not found.")
         return
-
     with open(root_readme, "r", encoding="utf-8") as file:
         readmeText = file.read()
     
@@ -193,15 +104,7 @@ def update():
         markers = SECTIONS.get(difficulty)
         if not markers:
             continue
-            
         header = ["| LeetCode #| Language | Solution |Algorithm/Approach|<div style= \"width:150px;\">Key Concept(s) </div>|", "| --- | --- | --- | --- | --- |"]
-        
-        # Debug: Tell us if we are about to update
-        if len(data) > 0:
-            print(f"💾 Updating {difficulty} with {len(data)} problems...")
-        else:
-            print(f"∅  No solutions found for {difficulty}.")
-
         data.sort(key=lambda x:x[0])
         flatRows = []
         for _, rows in data:
@@ -214,11 +117,109 @@ def update():
         snippet = re.escape(startTag) + r"(.*?)" + re.escape(endTag)
         overwrite = f"{startTag}\n{newTable}\n{endTag}"
         
-        readmeText = re.sub(snippet, overwrite, readmeText, flags=re.DOTALL)
         
+        match = re.search(snippet, readmeText, flags=re.DOTALL)
+        if match:
+            print(f"✅ FOUND tags for {difficulty}!")
+        else:
+            print(f"❌ COULD NOT FIND tags for {difficulty}. Check your README spacing.")
+        
+        
+        
+        readmeText = re.sub(snippet, overwrite, readmeText, flags=re.DOTALL)
     with open(root_readme, "w", encoding="utf-8") as file:
         file.write(readmeText)
-    print("🏁 DONE.")
+# if __name__ == "__main__":
+#     update()
+    
+# def update():
+#     print("🚀 STARTING DEBUG RUN...")
+    
+#     rowsByDifficulty = {key: [] for key in SECTIONS}
+    
+#     # 1. LOOP THROUGH CATEGORIES
+#     # ⚠️ Check: Do your actual folders match these lowercase names exactly?
+#     categories = ["easy", "medium", "hard"]
+    
+#     for category in categories:
+#         if not os.path.exists(category):
+#             print(f"⚠️  Skipping '{category}' (Folder not found)")
+#             continue
+            
+#         print(f"📂 Scanning category: {category}...")
+        
+#         # 2. LOOP THROUGH PROBLEM FOLDERS
+#         for questionFolder in os.listdir(category):
+#             folderPath = os.path.join(category, questionFolder)
+#             readmePath = os.path.join(folderPath, "readme.md") # Ensure this matches your file name!
+            
+#             # Check if it's a folder and has a readme
+#             if os.path.isdir(folderPath):
+#                 if os.path.exists(readmePath):
+#                     print(f"   📄 Found README in {questionFolder}. Parsing...")
+                    
+#                     # 3. READ METADATA
+#                     meta = read_frontmatter(readmePath)
+                    
+#                     if meta:
+#                         # Check Difficulty
+#                         if 'difficulty' in meta:
+#                             diff = meta['difficulty'].capitalize() # Force "Medium"
+#                             print(f"      ✅ Difficulty found: {diff}")
+                            
+#                             if diff in rowsByDifficulty:
+#                                 newRows = generate_MD_rows(meta, folderPath)
+#                                 print(f"      🎉 Generated {len(newRows)} rows.")
+#                                 problemNumber = int(meta.get("number", 0))
+#                                 rowsByDifficulty[diff].append((problemNumber, newRows))
+#                             else:
+#                                 print(f"      ❌ '{diff}' is not in SECTIONS keys!")
+#                         else:
+#                             print(f"      ❌ Missing 'difficulty' key in YAML.")
+#                     else:
+#                         print(f"      ❌ YAML Parsing Failed (Check indentation/tabs).")
+#                 else:
+#                     print(f"   ⚠️  No readme.md found in {questionFolder}")
+
+#     # 4. UPDATE THE ROOT README
+#     root_readme = "readme.md" 
+#     if not os.path.exists(root_readme):
+#         print(f"❌ Error: {root_readme} not found.")
+#         return
+
+#     with open(root_readme, "r", encoding="utf-8") as file:
+#         readmeText = file.read()
+    
+#     for difficulty, data in rowsByDifficulty.items():
+#         markers = SECTIONS.get(difficulty)
+#         if not markers:
+#             continue
+            
+#         header = ["| LeetCode #| Language | Solution |Algorithm/Approach|<div style= \"width:150px;\">Key Concept(s) </div>|", "| --- | --- | --- | --- | --- |"]
+        
+#         # Debug: Tell us if we are about to update
+#         if len(data) > 0:
+#             print(f"💾 Updating {difficulty} with {len(data)} problems...")
+#         else:
+#             print(f"∅  No solutions found for {difficulty}.")
+
+#         data.sort(key=lambda x:x[0])
+#         flatRows = []
+#         for _, rows in data:
+#             flatRows.extend(rows)
+            
+#         newTable = "\n".join(header+flatRows)
+#         startTag = markers["start"]
+#         endTag = markers["end"]
+        
+#         snippet = re.escape(startTag) + r"(.*?)" + re.escape(endTag)
+#         overwrite = f"{startTag}\n{newTable}\n{endTag}"
+        
+#         readmeText = re.sub(snippet, overwrite, readmeText, flags=re.DOTALL)
+        
+#     with open(root_readme, "w", encoding="utf-8") as file:
+#         file.write(readmeText)
+#     print("🏁 DONE.")
 
 if __name__ == "__main__":
     update()

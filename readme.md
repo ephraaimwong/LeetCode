@@ -1,4 +1,8 @@
-# Instructions
+<details> 
+    <summary> 
+        <h1>Instructions</h1>
+    </summary>
+
 <strong>Do not change the table of content's format before prior approval. </strong>
 ### New Problem Process
 1. Link the LeetCode Problem Description ```[Name of Problem](URL)```
@@ -8,9 +12,11 @@
 ### Existing Problem Process
 1. Find the existing solution sub-folder. <em>It should be linked in the readme.</em>
 2. Commit solution
-3. Update repo readme [language, key concept, algorithm]   
+3. Update repo readme [language, key concept, algorithm]
+</details>   
 
-# Easy
+<details> <summary><h1>Easy</h1></summary>
+
 | LeetCode #| Language | Solution  |Algorithm/Approach|<div style= "width:150px;">Key Concept(s) </div>|
 | - | - | - | - | - |
 | [1 - Two Sum](https://leetcode.com/problems/two-sum/description/https:/) | python | [LC1](easy/LC1) |Hashmap Complement|Given a target and current value, building a complement hashmap allows us to scan array and determine complement in a single pass|
@@ -36,8 +42,23 @@
 |[101 - Symmetric Tree](https://leetcode.com/problems/symmetric-tree/description/)|python|[LC101](easy/LC101)|Mirror DFS of 2 subtrees|<strong>Stack = DFS; Queue = BFS</strong><br>Check if current leftTree == current rightTree whilst doing a parallel walk.<br>1. Recursive MirrorTree<br>2. Iterative Stack of Pairs |
 |[111 - Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/description/)|python|[LC111](easy/LC111)|BFS|BFS use deque. <br>1. Append left && right if they exist. <br>2. Popleft to process current<br>Terminate Search at the first leaf to get min depth.|
 ||||||
+</details>
+<br>
+
+<details> <summary><h1> Medium</h1></summary>
+
 <!-- START Medium -->
 | LeetCode #| Language | Solution |Algorithm/Approach|<div style= "width:150px;">Key Concept(s) </div>|
 | --- | --- | --- | --- | --- |
 |[2 - Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)|python|[addtwo.py](medium/LC2/addtwo.py)|Hashmap Complement|Given a target and current value, building a complement hashmap<br>allows us to scan array and determine if complement exists within a single pass.|
 <!-- END Medium -->
+</details>
+<br>
+<details> 
+    <summary><h1> Hard</h1></summary>
+
+<!-- START Hard -->
+| LeetCode #| Language | Solution |Algorithm/Approach|<div style= "width:150px;">Key Concept(s) </div>|
+| --- | --- | --- | --- | --- |
+<!-- END Hard -->
+</details>
