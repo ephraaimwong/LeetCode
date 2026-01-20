@@ -12,7 +12,7 @@ import yaml
 # parentOpenTag = ""
 # childCloseTag = ""
 # parentCloseTag = ""
-
+ 
 SECTIONS = {
     "Easy": {"start": "<!-- START Easy -->", "end": "<!-- END Easy -->"},
     "Medium": {"start": "<!-- START Medium -->", "end": "<!-- END Medium -->"},
@@ -121,6 +121,11 @@ def update():
             "| --- | --- | --- | --- | --- |"
             ]
         
+        if len(data) > 0:
+            print(f"💾 Updating {difficulty} with {len(data)} problems...")
+        else:
+            print(f"∅  No solutions found for {difficulty}.")
+            
         data.sort(key=lambda x:x[0])
         flatRows = []
         for _, rows in data:
