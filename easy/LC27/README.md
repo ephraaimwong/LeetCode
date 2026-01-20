@@ -19,7 +19,7 @@ solutions:
 ---
 -->
 
-# Remove Duplicates from Sorted Array
+# Remove Element
 ### Ephraim's solution
 Using a for loop (read pointer), check if current is target. If not target, write current element to slow pointer index. If target, simply advance the read pointer while slow pointer remains unchanged.
 
