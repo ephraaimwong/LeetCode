@@ -52,7 +52,6 @@
 | --- | --- | --- | --- | --- |
 |[2 - Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)|python|[addtwo.py](medium/LC2/addtwo.py)|Hashmap Complement|Given a target and current value, building a complement hashmap<br>allows us to scan array and determine if complement exists within a single pass.|
 |[2 - Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)|python|[addtwo_test.py](medium/LC2/addtwo_test.py)|Hashmap Complement2|Lorem Ipsum etc etc.|
-|[2 - Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)|python|[addtwo_test.py](medium/LC2/addtwo_test.py)|Hashmap Complement2|Lorem Ipsum etc etc.|
 <!-- END Medium -->
 </details>
 <br>
