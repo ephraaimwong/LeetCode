@@ -70,7 +70,7 @@ def generate_MD_rows(meta, folder):
         
         if filename:
             filepath = os.path.join(folder, filename).replace("\\", "/")
-            filepath = f"[{filename}]({filepath})"
+            filepath = f"[{folder}]({filepath})"
         else:
             filepath = "No File Found"
         
