@@ -1,7 +1,8 @@
+<!-- 
 ---
 # Metadata
-number: 2 <!-- LeetCode Problem Number -->
-name: Add Two Numbers <!-- LeetCode Problem Name -->
+number: 2 //LeetCode Problem Number
+name: Add Two Numbers //LeetCode Problem Name
 url: https://leetcode.com/problems/add-two-numbers/
 difficulty: medium
 
@@ -9,7 +10,7 @@ difficulty: medium
 solutions:
   - author: author1
     language: python
-    filename: solutionName_author1.py <!-- must match the actual filename -->
+    filename: solutionName_author1.py //must match the actual filename
     algorithm: DSA Topic i.e BFS
     summary: |
       Denote salient details regarding the solution or DSA in general.
@@ -22,6 +23,7 @@ solutions:
     summary: |
       Testing Summary 2 with no linebreaks in YAML.
 ---
+-->
 
 # Two Sum
 ### Author1's solution
