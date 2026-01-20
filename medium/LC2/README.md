@@ -22,12 +22,7 @@ solutions:
     summary: |
       Lorem Ipsum etc etc.
       
-  - author: Ephraim3
-    language: python
-    filename: addtwo_test.py
-    algorithm: Hashmap Complement2
-    summary: |
-      Lorem Ipsum etc etc.
+  
 ---
 -->
 
