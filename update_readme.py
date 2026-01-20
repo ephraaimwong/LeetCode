@@ -120,11 +120,6 @@ def update():
             "| LeetCode #| Language | Solution |Algorithm/Approach|<div style= \"width:150px;\">Key Concept(s) </div>|",
             "| --- | --- | --- | --- | --- |"
             ]
-        
-        if len(data) > 0:
-            print(f"💾 Updating {difficulty} with {len(data)} problems...")
-        else:
-            print(f"∅  No solutions found for {difficulty}.")
             
         data.sort(key=lambda x:x[0])
         flatRows = []

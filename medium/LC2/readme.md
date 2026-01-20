@@ -1,9 +1,9 @@
+<!--
 ---
 # Metadata
 number: 2 
 name: Add Two Numbers
 url: https://leetcode.com/problems/add-two-numbers/
-difficulty: medium
 
 # List of Collaborator Solutions
 solutions:
@@ -20,8 +20,9 @@ solutions:
     filename: addtwo_test.py
     algorithm: Hashmap Complement2
     summary: |
-      Lorem Ipsum.
+      Lorem Ipsum etc etc.
 ---
+-->
 
 # Two Sum
 ### Ephraim's solution
