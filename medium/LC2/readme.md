@@ -20,15 +20,9 @@ solutions:
     filename: addtwo_test.py
     algorithm: Hashmap Complement2
     summary: |
-      Testing Summary 2 with no linebreaks in YAML.
+      Lorem Ipsum.
 ---
 
 # Two Sum
 ### Ephraim's solution
 ... Detailed Description of Solutions ...
-
-SECTIONS = {
-    "Easy":   {"start": "",   "end": ""},
-    "Medium": {"start": "", "end": ""},
-    "Hard":   {"start": "",   "end": ""}
-}
