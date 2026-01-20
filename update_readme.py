@@ -70,7 +70,7 @@ def generate_MD_rows(meta, folder):
         
         if filename:
             filepath = os.path.join(folder, filename).replace("\\", "/")
-            filepath = f"[{folder}]({filepath})"
+            filepath = f"[{folder.split("/")[1]}]({filepath})"
         else:
             filepath = "No File Found"
         
@@ -78,7 +78,7 @@ def generate_MD_rows(meta, folder):
         rows.append(MD_Row)
     
     return rows
-
+x
 def update():
     rowsByDifficulty = {key: [] for key in SECTIONS}
     for category in ["easy", "medium", "hard"]:
