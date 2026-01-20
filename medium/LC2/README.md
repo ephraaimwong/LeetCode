@@ -15,7 +15,14 @@ solutions:
       Given a target and current value, building a complement hashmap
       allows us to scan array and determine if complement exists within a single pass.  
   
-  - author: Ephraim
+  - author: Ephraim2
+    language: python
+    filename: addtwo_test.py
+    algorithm: Hashmap Complement2
+    summary: |
+      Lorem Ipsum etc etc.
+      
+  - author: Ephraim3
     language: python
     filename: addtwo_test.py
     algorithm: Hashmap Complement2
