@@ -1,3 +1,4 @@
+<!--
 ---
 # Metadata
 number: 1
@@ -9,18 +10,18 @@ solutions:
   - author: Ephraim
     language: python
     filename: twosum_ephraim.py
-    algorithm: Hashmap Complement
+    algorithm: Hashmap of Visited
     summary: |
-      Given a target and current value, building a complement hashmap
-      allows us to scan array and determine if complement exists within a single pass.
+      {VisitedNumber: Its_Index}
+      Scans array and determine if complement exists within a single pass.
 ---
+-->
 
 # Two Sum
 ### Ephraim's solution
-... Detailed Description of Solutions ...
+1. Loop through the numbers array
+2. Calculate the complement to current value
+3. Check if complement number was already visited
+4. If not, add current number to the hashmap with {currentNumber: current_index}
 
-SECTIONS = {
-    "Easy":   {"start": "",   "end": ""},
-    "Medium": {"start": "", "end": ""},
-    "Hard":   {"start": "",   "end": ""}
-}
+### Runtime: O(n)
