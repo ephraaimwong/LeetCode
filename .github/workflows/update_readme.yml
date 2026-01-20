@@ -17,14 +17,19 @@ jobs:
         steps:
           - name: Checkout repo
             uses: actions/checkout@v4
+
           - name: Set up Python
             uses: actions/setup-python@v4
             with:
               python-version: "3.9"
+              cache: "pip"
+
           - name: Install Dependencies
-            run: pip install pyyaml
+            run: pip install -r requirements.txt
+
           - name: Run Update Script
             run: python update_readme.py
+
           - name: Commit and Push
             uses: stefanzweifel/git-auto-commit-action@v5
             with:
