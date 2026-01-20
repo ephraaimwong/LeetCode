@@ -46,7 +46,6 @@ def read_frontmatter(file):
     
 def generate_MD_rows(meta, folder):
     rows = []
-    
     number = meta.get("number", "?")
     name = meta.get("name", "Unknown")
     url = meta.get("url", "?")
@@ -195,6 +194,8 @@ def update():
         if not markers:
             continue
             
+        header = ["| LeetCode #| Language | Solution |Algorithm/Approach|<div style= \"width:150px;\">Key Concept(s) </div>|", "| --- | --- | --- | --- | --- |"]
+        
         # Debug: Tell us if we are about to update
         if len(data) > 0:
             print(f"💾 Updating {difficulty} with {len(data)} problems...")
@@ -206,7 +207,7 @@ def update():
         for _, rows in data:
             flatRows.extend(rows)
             
-        newTable = "\n".join(flatRows)
+        newTable = "\n".join(header+flatRows)
         startTag = markers["start"]
         endTag = markers["end"]
         

@@ -36,9 +36,9 @@
 |[101 - Symmetric Tree](https://leetcode.com/problems/symmetric-tree/description/)|python|[LC101](easy/LC101)|Mirror DFS of 2 subtrees|<strong>Stack = DFS; Queue = BFS</strong><br>Check if current leftTree == current rightTree whilst doing a parallel walk.<br>1. Recursive MirrorTree<br>2. Iterative Stack of Pairs |
 |[111 - Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/description/)|python|[LC111](easy/LC111)|BFS|BFS use deque. <br>1. Append left && right if they exist. <br>2. Popleft to process current<br>Terminate Search at the first leaf to get min depth.|
 ||||||
+<!-- START Medium -->
 # Medium
 | LeetCode #| Language | Solution |Algorithm/Approach|<div style= "width:150px;">Key Concept(s) </div>|
 | - | - | - | - | - |
-<!-- START Medium -->
-
+||||||
 <!-- END Medium -->
