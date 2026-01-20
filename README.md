@@ -1,18 +1,19 @@
 <details open> 
-    <summary> 
-        <h1>Instructions</h1>
-    </summary>
+    <summary> <h1>Instructions</h1> </summary>
 
 <strong>Do not change the table of content's format before prior approval. </strong>
+
 ### New Problem Process
-1. Link the LeetCode Problem Description ```[Name of Problem](URL)```
-2. Create a new folder ```LC<problem_number>```
-3. Edit readme to link folder in step 2 ```[LC<problem_number>](difficulty/LC<problem_number>)```
-4. Commit solution to the new folder
+1. Create a new folder ```LC<problem_number>``` under the appropriate difficulty folder ```easy, medium, hard```
+2. Clone [template_README.md](templates/template_README.md) and rename to README.md
+3. Fill out the YAML frontmatter as directed in the template and include the README.md in the corresponding folder in step 1.
+4. Commit solution as ```filename_authorname``` to folder in step 1.
+
 ### Existing Problem Process
-1. Find the existing solution sub-folder. <em>It should be linked in the readme.</em>
-2. Commit solution
-3. Update repo readme [language, key concept, algorithm]
+1. Find the existing solution folder ```LC<problem_number>```. <em>It should be linked in the readme.</em>
+2. Commit solution to the folder.
+3. Update the README.md within solution folder ```i.e. easy/LC1/README.md```, follow the [template](templates/template_README.md) for how to add additional contributor(s) and solution(s) to existing problems.
+4. Commit solution as ```filename_authorname``` to folder in step 1.
 </details>   
 
 <details> <summary><h1>Easy</h1></summary>

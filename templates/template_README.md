@@ -4,7 +4,6 @@
 number: 2 //LeetCode Problem Number
 name: Add Two Numbers //LeetCode Problem Name
 url: https://leetcode.com/problems/add-two-numbers/
-difficulty: medium
 
 # List of Collaborator Solutions
 solutions:
