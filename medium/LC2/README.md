@@ -1,4 +1,4 @@
-<div style = "display:None">
+<div style = "display:none">
 ---
 # Metadata
 number: 2 
