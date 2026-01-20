@@ -89,7 +89,7 @@ def update():
             readmePath = os.path.join(folderPath, "README.md")
             
             if os.path.isdir(folderPath) and os.path.exists(readmePath):
-                print(f"{GREENCHECK} {questionFolder} README found.")
+                print(f"{GREENCHECK} {questionFolder} README.md found.")
                 meta = read_frontmatter(readmePath)
                 # if meta and 'difficulty' in meta:
                 if meta:
@@ -102,7 +102,7 @@ def update():
                     else:
                         print(f"{REDCROSS} Error: {difficultyType} is not a valid difficulty table.")
             else:
-                print(f"{REDCROSS} {questionFolder} README not found.")
+                print(f"{REDCROSS} {questionFolder} README.md not found.")
             
     root_readme = "README.md"
     if not os.path.exists(root_readme):
