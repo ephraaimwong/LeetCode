@@ -37,8 +37,7 @@
 |[111 - Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/description/)|python|[LC111](easy/LC111)|BFS|BFS use deque. <br>1. Append left && right if they exist. <br>2. Popleft to process current<br>Terminate Search at the first leaf to get min depth.|
 ||||||
 <!-- START Medium -->
-# Medium
 | LeetCode #| Language | Solution |Algorithm/Approach|<div style= "width:150px;">Key Concept(s) </div>|
-| - | - | - | - | - |
-||||||
+| --- | --- | --- | --- | --- |
+|[2 - Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)|python|[addtwo.py](medium/LC2/addtwo.py)|Hashmap Complement|Given a target and current value, building a complement hashmap<br>allows us to scan array and determine if complement exists within a single pass.|
 <!-- END Medium -->
