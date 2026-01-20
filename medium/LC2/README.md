@@ -1,4 +1,4 @@
-<!--
+<div style = "display:None">
 ---
 # Metadata
 number: 2 
@@ -15,7 +15,7 @@ solutions:
       Given a target and current value, building a complement hashmap
       allows us to scan array and determine if complement exists within a single pass.    
 ---
--->
+</div>
 
 
 # Two Sum
