@@ -1,4 +1,4 @@
-<details> 
+<details open> 
     <summary> 
         <h1>Instructions</h1>
     </summary>
