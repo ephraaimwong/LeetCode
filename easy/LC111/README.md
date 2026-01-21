@@ -1,7 +1,7 @@
 <!-- 
 ---
 # Metadata
-number: 104
+number: 111
 name: Minimum Depth of Binary Tree
 url: https://leetcode.com/problems/minimum-depth-of-binary-tree/
 
