@@ -3,7 +3,7 @@
 # Metadata
 number: 104
 name: Maximum Depth of Binary Tree
-url: https://leetcode.com/problems/symmetric-tree/
+url: https://leetcode.com/problems/maximum-depth-of-binary-tree/
 
 # List of Collaborator Solutions
 solutions:
