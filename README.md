@@ -40,8 +40,8 @@
 |[94 - Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)|python|[LC94](easy/LC94/inordertraversal_ephraim.py)|DFS|For trees, when len(stack) = 0, there are no parent nodes above it. To ensure loops continue switching from left to right, you ADDITIONALLY need to check for currentNode != None. <br>1. Recursive: Call left till None, then right till None<br>2. Stack: Push left nodes if as long as valid, then pop and push right|
 |[101 - Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)|python|[LC101](easy/LC101/issymmetric_ephraim.py)|Mirror DFS of 2 subtrees|1. Recursive: Check if left subtree == right subtree from given root.<br>2. Iterative: Stack of pairs.|
 |[104 - Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)|python|[LC104](easy/LC104/maxdepth_ephraim.py)|DFS with count return|DFS with incremented count return|
-|[104 - Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)|python|[LC111](easy/LC111/mindepth_ephraim.py)|BFS with depth count|BFS uses deque([]), append current's child and popleft to process nodes in depth order.|
 |[108 - Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)|python|[LC108](easy/LC108/heightbalancedBST_ephraim.py)|Binary Search Depth First Build|Use Binary Search Partioning where root.left = lowerhalf mid, root.right = upperhalf mid|
+|[111 - Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)|python|[LC111](easy/LC111/mindepth_ephraim.py)|BFS with depth count|BFS uses deque([]), append current's child and popleft to process nodes in depth order.|
 <!-- END Easy -->
 </details>
 <br>
