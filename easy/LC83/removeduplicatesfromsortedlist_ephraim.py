@@ -15,11 +15,11 @@ class Solution(object):
             currentVal = currentNode.val
             nextVal = currentNode.next.val
 
-            if currentVal == nextVal:
-                currentNode.next = currentNode.next.next
+            if currentVal == nextVal: #will rerun this check after killing repeated
+                currentNode.next = currentNode.next.next #set .next to 2 ahead
                 killNode = currentNode.next
-                killNode = None
-            else:
+                killNode = None #kill the repeated node
+            else: # only triggers when current != next
                 currentNode = currentNode.next
             
         return dummyHead
