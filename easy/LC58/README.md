@@ -1,7 +1,7 @@
 <!-- 
 ---
 # Metadata
-number: 35
+number: 58
 name: Length of Last Word
 url: https://leetcode.com/problems/length-of-last-word/
 
