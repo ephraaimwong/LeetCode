@@ -17,6 +17,7 @@
 </details>   
 
 <details> <summary><h1>Easy</h1></summary>
+
 <!-- START Easy -->
 | LeetCode #| Language | Solution  |Algorithm/Approach|<div style= "width:150px;">Key Concept(s) </div>|
 | - | - | - | - | - |
