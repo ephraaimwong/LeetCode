@@ -13,6 +13,12 @@ class Solution(object):
         """
         ---- Solution Intent 1 (Recursive DFS) ----
         Compare DFS left to DFS right and vice versa between 2 trees
+        
+                                  rt
+                        /                   \
+                 rt1                         rt2
+              /      \                    /      \
+        rt1.left    rt1.right       rt2.left    rt2.right
         """
         if not root: return True
         #check if 2 trees are mirrors given their roots
