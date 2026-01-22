@@ -42,6 +42,7 @@
 |[104 - Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)|python|[LC104](easy/LC104/maxdepth_ephraim.py)|DFS with count return|DFS with incremented count return|
 |[108 - Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)|python|[LC108](easy/LC108/heightbalancedBST_ephraim.py)|Binary Search Depth First Build|Use Binary Search Partioning where root.left = lowerhalf mid, root.right = upperhalf mid|
 |[111 - Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)|python|[LC111](easy/LC111/mindepth_ephraim.py)|BFS with depth count|BFS uses deque([]), append current's child and popleft to process nodes in depth order.|
+|[118 - Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)|python|[LC118](easy/LC118/pascaltriangle_ephraim.py)|Two Sum|1. Double for loop: 1 for levels, 1 for calculating elements<br>2. Hockey Stick: Element n, level m is sum of all elements n-1 from levels n-1 to m-1|
 <!-- END Easy -->
 </details>
 <br>
