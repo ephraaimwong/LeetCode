@@ -3,17 +3,29 @@
 
 <strong>Do not change the table of content's format before prior approval. </strong>
 
-### New Problem Process
-1. Create a new folder ```LC<problem_number>``` under the appropriate difficulty folder ```easy, medium, hard```
-2. Clone [template_README.md](templates/template_README.md) and rename to README.md
-3. Fill out the YAML frontmatter as directed in the template and include the README.md in the corresponding folder in step 1.
-4. Commit solution as ```filename_authorname``` to folder in step 1.
+1. Create new branch from main `LC<problem_number>_author`.
+    - Pull main regularly if you open a branch for more than a single day
+    - Don't bother trying to push to main directly (`protected branch hook declined` error will be thrown)
 
-### Existing Problem Process
-1. Find the existing solution folder ```LC<problem_number>```. <em>It should be linked in the readme.</em>
-2. Commit solution to the folder.
-3. Update the README.md within solution folder ```i.e. easy/LC1/README.md```, follow the [template](templates/template_README.md) for how to add additional contributor(s) and solution(s) to existing problems.
-4. Commit solution as ```filename_authorname``` to folder in step 1.
+<details> <summary><h3>New Problem Process Steps 2 - 4</h3></summary>
+
+2. Create a new folder ```LC<problem_number>``` under the appropriate difficulty folder ```easy, medium, hard```
+3. Clone [template_README.md](templates/template_README.md) and rename to README.md
+4. Fill out the YAML frontmatter as directed in the template and include the README.md in the corresponding folder in step 2.
+</details>
+<details> <summary><h3>Existing Problem Process Steps 2 - 4</h3></summary>
+
+2. Find the existing solution folder ```LC<problem_number>```. <em>It should be linked in the readme.</em>
+3. Commit solution to the folder.
+4. Update the README.md within solution folder ```i.e. easy/LC1/README.md```, follow the [template](templates/template_README.md) for how to add additional contributor(s) and solution(s) to existing problems.
+</details>
+
+(...continued)
+
+5. Commit solution as ```filename_authorname``` to folder in step 2.
+    - Use a sensible commit message `i.e LC83`, gibberish will be rejected in the pursuit of sanity maintenance.
+
+6. Pull Request to main and wait for approval.
 </details>   
 
 <details> <summary><h1>Easy</h1></summary>
