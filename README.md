@@ -43,6 +43,7 @@
 |[108 - Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)|python|[LC108](easy/LC108/heightbalancedBST_ephraim.py)|Binary Search Depth First Build|Use Binary Search Partioning where root.left = lowerhalf mid, root.right = upperhalf mid|
 |[111 - Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)|python|[LC111](easy/LC111/mindepth_ephraim.py)|BFS with depth count|BFS uses deque([]), append current's child and popleft to process nodes in depth order.|
 |[118 - Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)|python|[LC118](easy/LC118/pascaltriangle_ephraim.py)|Two Sum|1. Double for loop: 1 for levels, 1 for calculating elements<br>2. Hockey Stick: Element n, level m is sum of all elements n-1 from levels n-1 to m-1|
+|[121 - Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)|python|[LC121](easy/LC121/buystocks_ephraim.py)|Greedy Algorithm|Buy and sell must be in respect to time, we cannot use a 2 pointer approach.<br>Greedy approach makes the best locally available choice(respects the time constraint)|
 <!-- END Easy -->
 </details>
 <br>
