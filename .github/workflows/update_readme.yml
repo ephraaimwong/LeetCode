@@ -35,3 +35,4 @@ jobs:
             with:
               commit_message: "docs: Auto-update root readme with new solutions"
               file_pattern: README.md
+              token: ${{secrets.LEETCODE_PAT}}
