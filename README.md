@@ -57,6 +57,7 @@
 |[118 - Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)|python|[LC118](easy/LC118/pascaltriangle_ephraim.py)|Two Sum|1. Double for loop: 1 for levels, 1 for calculating elements<br>2. Hockey Stick: Element n, level m is sum of all elements n-1 from levels n-1 to m-1|
 |[121 - Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)|python|[LC121](easy/LC121/buystocks_ephraim.py)|Greedy Algorithm|Buy and sell must be in respect to time, we cannot use a 2 pointer approach.<br>Greedy approach makes the best locally available choice(respects the time constraint)|
 |[125 - Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)|python|[LC125](easy/LC125/validpalindrome_ephraim.py)|2 Pointer|.alnum() checks if char is alphanumeric<br>variable[::-1] is string reversal<br>1. In-place search without normalizing data  - O(1) Mem O(n) Run<br>2. Search after normalization with string building - O(n) Mem O(n) Run<br>3. Regex "Blacklist" Substitution|
+|[136 - Single Number](https://leetcode.com/problems/single-number/)|python|[LC136](easy/LC136/singlenum_ephraim.py)|XOR bit manipulation|a XOR a == 0|
 <!-- END Easy -->
 </details>
 <br>
