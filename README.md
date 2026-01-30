@@ -69,6 +69,7 @@
 | --- | --- | --- | --- | --- |
 |[2 - Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)|python|[LC2](medium/LC2/addtwo.py)|Hashmap Complement|Given a target and current value, building a complement hashmap<br>allows us to scan array and determine if complement exists within a single pass.|
 |[128 - Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)|python|[LC128](medium/LC128/longestseq_ephraim.py)|Hashset Head-check|foreach loop iterates sets<br>Sequences DO NOT need to be in-order<br>Calculate the length of sequences when a HEAD is encountered|
+|[137 - Single Number II](https://leetcode.com/problems/single-number-ii/)|python|[LC137](medium/LC137/singlenum2_ephraim.py)|Bit count by column|Given a target and current value, building a complement hashmap<br>allows us to scan array and determine if complement exists within a single pass.|
 <!-- END Medium -->
 </details>
 <br>
