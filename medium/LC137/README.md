@@ -87,3 +87,20 @@ edge case of 1111...1111 (2^31) does not need to be considered due to the questi
 General Formula: Inverting bit numbers
 Where K is the sign bit (MSB), 2's complement = 2^(K+1)
 ```
+
+#### Approach 2: K-Map using Rejection Gates
+Refer to [LC136](/easy/LC136/singlenum_ephraim.py) for how bitwise XOR works.
+
+As stated above, `&` has masking properties which can be used in conjection with `~ (bitwise NOT)` to create rejection gates (set difference)
+
+```
+i.e. 
+If I want to reject 9(1001) from the running tally(1101), 1101 & ~1001 is 1101 & 0110 -> 0100 (4).
+
+This is basically a conditional minus or A/B set difference "A - A ∩ B"
+```
+For every number, we check if it is first encounter (number does not get zeroed during XOR appearOnce and is not gatekept by appearTwice's tally).
+
+If it does not survive that check (does not go into appearOnce's tally), it is not a first appearance BUT will be removed from its tally. We then check if it is a 2nd or 3rd appearance. If num is not gatekept by appearOnce's tally, twos grabs the number. If nums appears a 3rd time, appearTwice will remove it from the tally, effectively dropping the number from evaluation.
+
+**State 01 takes priority to grab numbers, if state 01 does not claim a number, state 10 will then claim it.
