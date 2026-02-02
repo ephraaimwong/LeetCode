@@ -68,6 +68,7 @@
 | LeetCode #| Language | Solution |Algorithm/Approach|<div style= "width:150px;">Key Concept(s) </div>|
 | --- | --- | --- | --- | --- |
 |[2 - Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)|python|[LC2](medium/LC2/addtwo.py)|Hashmap Complement|Given a target and current value, building a complement hashmap<br>allows us to scan array and determine if complement exists within a single pass.|
+|[5 - Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)|python|[LC5](medium/LC5/longestpalinsubstring_ephraim.py)|Centric Expansion|Expand Around Center is specialized 2 Pointer to find widest width of a certain pattern(symmetry, etc...).<br>Start from a center and expand whilst property is valid.<br>Treat each char as a potential center point use greedy approach to update longest substring.|
 |[128 - Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)|python|[LC128](medium/LC128/longestseq_ephraim.py)|Hashset Head-check|foreach loop iterates sets<br>Sequences DO NOT need to be in-order<br>Calculate the length of sequences when a HEAD is encountered|
 |[137 - Single Number II](https://leetcode.com/problems/single-number-ii/)|python|[LC137](medium/LC137/singlenum2_ephraim.py)|Bit count by column|Given a target and current value, building a complement hashmap<br>allows us to scan array and determine if complement exists within a single pass.|
 <!-- END Medium -->
